@@ -1,5 +1,6 @@
 from .__version__ import __version__
 
+
 def get_version():
     """Get current lib`s version
 
