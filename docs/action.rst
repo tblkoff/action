@@ -1,13 +1,13 @@
-src package
-===========
+action package
+==============
 
 Submodules
 ----------
 
-src.main module
----------------
+action.main module
+------------------
 
-.. automodule:: src.main
+.. automodule:: action.main
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,7 +15,7 @@ src.main module
 Module contents
 ---------------
 
-.. automodule:: src
+.. automodule:: action
    :members:
    :undoc-members:
    :show-inheritance:
