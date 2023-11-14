@@ -4,9 +4,9 @@ repos:
     rev: v4.5.0
     hooks:
       - id: no-commit-to-branch
-        name: "Protect master"
+        name: "Protect main branch"
         args:
-          - --branch=master
+          - --branch=main
       - id: check-docstring-first
       - id: double-quote-string-fixer
       - id: end-of-file-fixer
