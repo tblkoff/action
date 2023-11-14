@@ -1,4 +1,4 @@
-name: documentation
+name: Publish documentation
 
 on:
   push:
@@ -12,20 +12,19 @@ jobs:
   docs:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install sphinx sphinx_rtd_theme
       - name: Sphinx build
         run: |
-          cd docs
-          sphinx-apidoc -o . ../action
-          make html
+          sphinx-build docs _build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _build/html
+          publish_dir: _build
           force_orphan: true
