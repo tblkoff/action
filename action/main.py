@@ -1,10 +1,9 @@
-from .__version__ import __version__
+from .params import param
 
-
-def get_version():
+def get_param():
     """Get current lib`s version
 
     :return: The current lib`s version
     :rtype: str
     """
-    return __version__
+    return param

@@ -1,7 +1,6 @@
-from action.main import get_version
-from action.__version__ import __version__
+from action.main import get_param
 
 
 def test_version():
-    version = get_version()
-    version.should.be.equal(__version__)
+    param = get_param()
+    param.should.be.equal(42)
