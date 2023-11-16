@@ -23,7 +23,7 @@ jobs:
     - name: Build package
       run: python -m build
     - name: Publish package
-      with:
+      env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
       run: twine upload --repository testpypi --non-interactive dist/*
